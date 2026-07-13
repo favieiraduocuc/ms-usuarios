@@ -1,0 +1,446 @@
+nohup: ignoring input
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v3.3.4)
+
+2026-06-24T22:06:18.099Z  INFO 5290 --- [           main] c.lumora.usuarios.MsUsuariosApplication  : Starting MsUsuariosApplication v1.0.0 using Java 17.0.19 with PID 5290 (/home/ec2-user/lumora/microservicios/ms-usuarios/target/ms-usuarios-1.0.0.jar started by ec2-user in /home/ec2-user/lumora/microservicios/ms-usuarios)
+2026-06-24T22:06:18.112Z  INFO 5290 --- [           main] c.lumora.usuarios.MsUsuariosApplication  : No active profile set, falling back to 1 default profile: "default"
+2026-06-24T22:06:20.089Z  INFO 5290 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-06-24T22:06:20.193Z  INFO 5290 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 88 ms. Found 2 JPA repository interfaces.
+2026-06-24T22:06:21.142Z  INFO 5290 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8081 (http)
+2026-06-24T22:06:21.161Z  INFO 5290 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-06-24T22:06:21.162Z  INFO 5290 --- [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.30]
+2026-06-24T22:06:21.220Z  INFO 5290 --- [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-06-24T22:06:21.222Z  INFO 5290 --- [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2996 ms
+2026-06-24T22:06:21.492Z  INFO 5290 --- [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-06-24T22:06:21.631Z  INFO 5290 --- [           main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.3.Final
+2026-06-24T22:06:21.697Z  INFO 5290 --- [           main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2026-06-24T22:06:22.258Z  INFO 5290 --- [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-06-24T22:06:22.305Z  INFO 5290 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-06-24T22:06:22.568Z  INFO 5290 --- [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@4537880f
+2026-06-24T22:06:22.570Z  INFO 5290 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-06-24T22:06:23.978Z  INFO 5290 --- [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-06-24T22:06:24.046Z  INFO 5290 --- [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-06-24T22:06:24.777Z  WARN 5290 --- [           main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-06-24T22:06:25.571Z  INFO 5290 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8081 (http) with context path '/'
+2026-06-24T22:06:25.591Z  INFO 5290 --- [           main] c.lumora.usuarios.MsUsuariosApplication  : Started MsUsuariosApplication in 8.4 seconds (process running for 9.383)
+2026-06-24T22:09:09.725Z  INFO 5290 --- [nio-8081-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-06-24T22:09:09.725Z  INFO 5290 --- [nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-06-24T22:09:09.734Z  INFO 5290 --- [nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+Hibernate: 
+    select
+        ue1_0.id_usuario,
+        ue1_0.activo,
+        ue1_0.azure_object_id,
+        ue1_0.correo,
+        ue1_0.fecha_creacion,
+        ue1_0.fecha_modificacion,
+        ue1_0.nombre,
+        ue1_0.id_rol,
+        ue1_0.telefono 
+    from
+        usuario ue1_0
+Hibernate: 
+    select
+        re1_0.id_rol,
+        re1_0.descripcion,
+        re1_0.nombre 
+    from
+        rol re1_0 
+    where
+        re1_0.id_rol=?
+Hibernate: 
+    select
+        re1_0.id_rol,
+        re1_0.descripcion,
+        re1_0.nombre 
+    from
+        rol re1_0 
+    where
+        re1_0.id_rol=?
+Hibernate: 
+    select
+        re1_0.id_rol,
+        re1_0.descripcion,
+        re1_0.nombre 
+    from
+        rol re1_0 
+    where
+        re1_0.id_rol=?
+Hibernate: 
+    select
+        ue1_0.id_usuario,
+        ue1_0.activo,
+        ue1_0.azure_object_id,
+        ue1_0.correo,
+        ue1_0.fecha_creacion,
+        ue1_0.fecha_modificacion,
+        ue1_0.nombre,
+        ue1_0.id_rol,
+        ue1_0.telefono 
+    from
+        usuario ue1_0
+Hibernate: 
+    select
+        re1_0.id_rol,
+        re1_0.descripcion,
+        re1_0.nombre 
+    from
+        rol re1_0 
+    where
+        re1_0.id_rol=?
+Hibernate: 
+    select
+        re1_0.id_rol,
+        re1_0.descripcion,
+        re1_0.nombre 
+    from
+        rol re1_0 
+    where
+        re1_0.id_rol=?
+Hibernate: 
+    select
+        re1_0.id_rol,
+        re1_0.descripcion,
+        re1_0.nombre 
+    from
+        rol re1_0 
+    where
+        re1_0.id_rol=?
+Hibernate: 
+    select
+        ue1_0.id_usuario,
+        ue1_0.activo,
+        ue1_0.azure_object_id,
+        ue1_0.correo,
+        ue1_0.fecha_creacion,
+        ue1_0.fecha_modificacion,
+        ue1_0.nombre,
+        ue1_0.id_rol,
+        ue1_0.telefono 
+    from
+        usuario ue1_0 
+    where
+        ue1_0.id_usuario=?
+Hibernate: 
+    select
+        re1_0.id_rol,
+        re1_0.descripcion,
+        re1_0.nombre 
+    from
+        rol re1_0 
+    where
+        re1_0.id_rol=?
+Hibernate: 
+    select
+        ue1_0.id_usuario,
+        ue1_0.activo,
+        ue1_0.azure_object_id,
+        ue1_0.correo,
+        ue1_0.fecha_creacion,
+        ue1_0.fecha_modificacion,
+        ue1_0.nombre,
+        ue1_0.id_rol,
+        ue1_0.telefono 
+    from
+        usuario ue1_0
+Hibernate: 
+    select
+        re1_0.id_rol,
+        re1_0.descripcion,
+        re1_0.nombre 
+    from
+        rol re1_0 
+    where
+        re1_0.id_rol=?
+Hibernate: 
+    select
+        re1_0.id_rol,
+        re1_0.descripcion,
+        re1_0.nombre 
+    from
+        rol re1_0 
+    where
+        re1_0.id_rol=?
+Hibernate: 
+    select
+        re1_0.id_rol,
+        re1_0.descripcion,
+        re1_0.nombre 
+    from
+        rol re1_0 
+    where
+        re1_0.id_rol=?
+Hibernate: 
+    select
+        ue1_0.id_usuario,
+        ue1_0.activo,
+        ue1_0.azure_object_id,
+        ue1_0.correo,
+        ue1_0.fecha_creacion,
+        ue1_0.fecha_modificacion,
+        ue1_0.nombre,
+        ue1_0.id_rol,
+        ue1_0.telefono 
+    from
+        usuario ue1_0
+Hibernate: 
+    select
+        re1_0.id_rol,
+        re1_0.descripcion,
+        re1_0.nombre 
+    from
+        rol re1_0 
+    where
+        re1_0.id_rol=?
+Hibernate: 
+    select
+        re1_0.id_rol,
+        re1_0.descripcion,
+        re1_0.nombre 
+    from
+        rol re1_0 
+    where
+        re1_0.id_rol=?
+Hibernate: 
+    select
+        re1_0.id_rol,
+        re1_0.descripcion,
+        re1_0.nombre 
+    from
+        rol re1_0 
+    where
+        re1_0.id_rol=?
+Hibernate: 
+    select
+        ue1_0.id_usuario,
+        ue1_0.activo,
+        ue1_0.azure_object_id,
+        ue1_0.correo,
+        ue1_0.fecha_creacion,
+        ue1_0.fecha_modificacion,
+        ue1_0.nombre,
+        ue1_0.id_rol,
+        ue1_0.telefono 
+    from
+        usuario ue1_0
+Hibernate: 
+    select
+        re1_0.id_rol,
+        re1_0.descripcion,
+        re1_0.nombre 
+    from
+        rol re1_0 
+    where
+        re1_0.id_rol=?
+Hibernate: 
+    select
+        re1_0.id_rol,
+        re1_0.descripcion,
+        re1_0.nombre 
+    from
+        rol re1_0 
+    where
+        re1_0.id_rol=?
+Hibernate: 
+    select
+        re1_0.id_rol,
+        re1_0.descripcion,
+        re1_0.nombre 
+    from
+        rol re1_0 
+    where
+        re1_0.id_rol=?
+Hibernate: 
+    select
+        ue1_0.id_usuario,
+        ue1_0.activo,
+        ue1_0.azure_object_id,
+        ue1_0.correo,
+        ue1_0.fecha_creacion,
+        ue1_0.fecha_modificacion,
+        ue1_0.nombre,
+        ue1_0.id_rol,
+        ue1_0.telefono 
+    from
+        usuario ue1_0 
+    where
+        ue1_0.id_usuario=?
+Hibernate: 
+    select
+        re1_0.id_rol,
+        re1_0.descripcion,
+        re1_0.nombre 
+    from
+        rol re1_0 
+    where
+        re1_0.id_rol=?
+Hibernate: 
+    select
+        ue1_0.id_usuario,
+        ue1_0.activo,
+        ue1_0.azure_object_id,
+        ue1_0.correo,
+        ue1_0.fecha_creacion,
+        ue1_0.fecha_modificacion,
+        ue1_0.nombre,
+        ue1_0.id_rol,
+        ue1_0.telefono 
+    from
+        usuario ue1_0
+Hibernate: 
+    select
+        re1_0.id_rol,
+        re1_0.descripcion,
+        re1_0.nombre 
+    from
+        rol re1_0 
+    where
+        re1_0.id_rol=?
+Hibernate: 
+    select
+        re1_0.id_rol,
+        re1_0.descripcion,
+        re1_0.nombre 
+    from
+        rol re1_0 
+    where
+        re1_0.id_rol=?
+Hibernate: 
+    select
+        re1_0.id_rol,
+        re1_0.descripcion,
+        re1_0.nombre 
+    from
+        rol re1_0 
+    where
+        re1_0.id_rol=?
+Hibernate: 
+    select
+        ue1_0.id_usuario,
+        ue1_0.activo,
+        ue1_0.azure_object_id,
+        ue1_0.correo,
+        ue1_0.fecha_creacion,
+        ue1_0.fecha_modificacion,
+        ue1_0.nombre,
+        ue1_0.id_rol,
+        ue1_0.telefono 
+    from
+        usuario ue1_0
+Hibernate: 
+    select
+        re1_0.id_rol,
+        re1_0.descripcion,
+        re1_0.nombre 
+    from
+        rol re1_0 
+    where
+        re1_0.id_rol=?
+Hibernate: 
+    select
+        re1_0.id_rol,
+        re1_0.descripcion,
+        re1_0.nombre 
+    from
+        rol re1_0 
+    where
+        re1_0.id_rol=?
+Hibernate: 
+    select
+        re1_0.id_rol,
+        re1_0.descripcion,
+        re1_0.nombre 
+    from
+        rol re1_0 
+    where
+        re1_0.id_rol=?
+Hibernate: 
+    select
+        ue1_0.id_usuario,
+        ue1_0.activo,
+        ue1_0.azure_object_id,
+        ue1_0.correo,
+        ue1_0.fecha_creacion,
+        ue1_0.fecha_modificacion,
+        ue1_0.nombre,
+        ue1_0.id_rol,
+        ue1_0.telefono 
+    from
+        usuario ue1_0
+Hibernate: 
+    select
+        re1_0.id_rol,
+        re1_0.descripcion,
+        re1_0.nombre 
+    from
+        rol re1_0 
+    where
+        re1_0.id_rol=?
+Hibernate: 
+    select
+        re1_0.id_rol,
+        re1_0.descripcion,
+        re1_0.nombre 
+    from
+        rol re1_0 
+    where
+        re1_0.id_rol=?
+Hibernate: 
+    select
+        re1_0.id_rol,
+        re1_0.descripcion,
+        re1_0.nombre 
+    from
+        rol re1_0 
+    where
+        re1_0.id_rol=?
+Hibernate: 
+    select
+        ue1_0.id_usuario,
+        ue1_0.activo,
+        ue1_0.azure_object_id,
+        ue1_0.correo,
+        ue1_0.fecha_creacion,
+        ue1_0.fecha_modificacion,
+        ue1_0.nombre,
+        ue1_0.id_rol,
+        ue1_0.telefono 
+    from
+        usuario ue1_0
+Hibernate: 
+    select
+        re1_0.id_rol,
+        re1_0.descripcion,
+        re1_0.nombre 
+    from
+        rol re1_0 
+    where
+        re1_0.id_rol=?
+Hibernate: 
+    select
+        re1_0.id_rol,
+        re1_0.descripcion,
+        re1_0.nombre 
+    from
+        rol re1_0 
+    where
+        re1_0.id_rol=?
+Hibernate: 
+    select
+        re1_0.id_rol,
+        re1_0.descripcion,
+        re1_0.nombre 
+    from
+        rol re1_0 
+    where
+        re1_0.id_rol=?
+2026-06-25T00:58:12.913Z  INFO 5290 --- [ionShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-06-25T00:58:12.917Z  INFO 5290 --- [ionShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-06-25T00:58:12.958Z  INFO 5290 --- [ionShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.

@@ -1,0 +1,3 @@
+cl\lumora\usuarios\application\service\UsuarioServiceTest.class
+cl\lumora\usuarios\infrastructure\adapter\in\web\RolControllerTest.class
+cl\lumora\usuarios\infrastructure\adapter\in\web\UsuarioControllerTest.class
